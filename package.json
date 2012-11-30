@@ -1,6 +1,6 @@
 {
   "name": "myprowl",
-  "preferGlobal": "false",
+  "preferGlobal": "true",
   "version": "0.1.0",
   "author": "Hendrik Westerberg <hendrik@gestorf.com>",
   "description": "Prowl API Library for node",
@@ -15,8 +15,8 @@
     "notification"
   ],
   "dependencies" : {
-    "request"   :  "*",
-    "xml2json" : "*"
+    "request"   :  "2.12.x",
+    "xml2json" : "0.3.x"
   },
   "analyze": false,
   "license": "MIT",

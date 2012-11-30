@@ -20,7 +20,7 @@ More info and API/Provider Key registration: https://www.prowlapp.com/
 Add a notification with the required parameters.
 
 ```javascript
-var prowl = require('./myprowl');
+var prowl = require('myprowl');
 prowl.keys.setApikey("API-KEY");
 prowl.add.simple("myApp","TestEvent","myDescription", function(error,response){
 	if(!error){
@@ -37,7 +37,7 @@ prowl.add.simple("myApp","TestEvent","myDescription", function(error,response){
 Add a notification with optional parameters.
 
 ```javascript
-var prowl = require('./myprowl');
+var prowl = require('myprowl');
 prowl.keys.setApikey("API-KEY");
 prowl.add.complex({
 		priority: 1,
@@ -61,7 +61,7 @@ prowl.add.complex({
 Verify an API key that is provided by a user.
 
 ```javascript
-var prowl = require('./myprowl');
+var prowl = require('myprowl');
 prowl.verify("USER-API-KEY",function(error,response){
 	if(!error){
 		console.log("valid");
@@ -79,7 +79,7 @@ Allow applications to create API keys for users.
 ### 1. Step: Get a registration token.
 
 ```javascript
-var prowl = require('./myprowl');
+var prowl = require('myprowl');
 prowl.keys.setProviderkey("Provider-KEY");
 prowl.retrieve.token(function(error,response){
 	if(!error){
@@ -96,7 +96,7 @@ prowl.retrieve.token(function(error,response){
 ### 2. Step: Get the key.
 
 ```javascript
-var prowl = require('./myprowl');
+var prowl = require('myprowl');
 prowl.keys.setProviderkey("Provider-KEY");
 prowl.retrieve.apikey("TOKEN",function(error,response){
 	if(!error){
@@ -113,13 +113,13 @@ prowl.retrieve.apikey("TOKEN",function(error,response){
 
 ### keys.setApikey(key)
 
-Set the API Key for your application. The key is used for all API calls.
+Set the API Key for your application. The key is used for the add API calls.
 
 * `key` - 40-byte hexadecimal string or multiple keys separated by commas.
 
 ### keys.setProviderkey(key)
 
-Set the Provider Key for your application. The key is used for all API calls.
+Set the Provider Key for your application. The provider key is used for all API calls.
 
 * `key` - 40-byte hexadecimal string.
 
