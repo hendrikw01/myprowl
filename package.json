@@ -1,9 +1,10 @@
 {
   "name": "myprowl",
-  "preferGlobal": "true",
-  "version": "0.1.0",
+  "preferGlobal": "false",
+  "version": "0.1.1",
   "author": "Hendrik Westerberg <hendrik@gestorf.com>",
   "description": "Prowl API Library for node",
+  "homepage": "https://github.com/hendrikw01/myprowl",
   "main": "./myprowl.js",
   "repository": {
     "type": "git",
@@ -15,8 +16,8 @@
     "notification"
   ],
   "dependencies" : {
-    "request"   :  "2.12.x",
-    "xml2json" : "0.3.x"
+    "request"   :  "~2",
+    "xml2json" : "~0.3"
   },
   "analyze": false,
   "license": "MIT",
