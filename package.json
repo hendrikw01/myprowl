@@ -1,0 +1,26 @@
+{
+  "name": "myprowl",
+  "preferGlobal": "false",
+  "version": "0.1.0",
+  "author": "Hendrik Westerberg <hendrik@gestorf.com>",
+  "description": "Prowl API Library for node",
+  "main": "./myprowl.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hendrikw01/myprowl.git"
+  },
+  "keywords": [
+    "prowl",
+    "ios",
+    "notification"
+  ],
+  "dependencies" : {
+    "request"   :  "*",
+    "xml2json" : "*"
+  },
+  "analyze": false,
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.6"
+  }
+}
