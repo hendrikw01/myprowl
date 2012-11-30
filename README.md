@@ -24,7 +24,8 @@ var prowl = require('./myprowl');
 prowl.keys.setApikey("API-KEY");
 prowl.add.simple("myApp","TestEvent","myDescription", function(error,response){
 	if(!error){
-		console.log("OK, remaining: "+response.success.remaining+" , resetdate: "+response.success.resetdate);
+		console.log("OK, remaining: "+response.success.remaining+
+					" , resetdate: "+response.success.resetdate);
 	}else{
 		console.log(error);
 	}
@@ -47,7 +48,8 @@ prowl.add.complex({
 	}, 
 	function(error,response){
 	if(!error){
-		console.log("OK, remaining: "+response.success.remaining+" , resetdate: "+response.success.resetdate);
+		console.log("OK, remaining: "+response.success.remaining+
+					" , resetdate: "+response.success.resetdate);
 	}else{
 		console.log(error);
 	}
@@ -81,7 +83,8 @@ var prowl = require('./myprowl');
 prowl.keys.setProviderkey("Provider-KEY");
 prowl.retrieve.token(function(error,response){
 	if(!error){
-		console.log("OK, remaining: "+response.success.remaining+" , resetdate: "+response.success.resetdate);
+		console.log("OK, remaining: "+response.success.remaining+
+					" , resetdate: "+response.success.resetdate);
 		console.log("Token: "+response.retrieve.token);
 		console.log("Redirect user to url: "+response.retrieve.url);
 	}else{
@@ -97,7 +100,8 @@ var prowl = require('./myprowl');
 prowl.keys.setProviderkey("Provider-KEY");
 prowl.retrieve.apikey("TOKEN",function(error,response){
 	if(!error){
-		console.log("OK, remaining: "+response.success.remaining+" , resetdate: "+response.success.resetdate);
+		console.log("OK, remaining: "+response.success.remaining+
+					" , resetdate: "+response.success.resetdate);
 		console.log("API key: "+response.retrieve.apikey);
 	}else{
 		console.log(error);
@@ -129,11 +133,11 @@ Set the Provider Key for your application. The key is used for all API calls.
 ### add.complex(options,callback)
 
 * `options`
-** `priority` - Notification priority. [-2,2] (Optional)
-** `url` - URL which will be attached to the notification. [512 chars] (Optional)
-** `app` - Name of the application. [256 chars]
-** `event` - Name of the event or the subject. [1024 chars]
-** `description` - Description [10000 chars]
+    * `priority` - Notification priority. [-2,2] (Optional)
+    * `url` - URL which will be attached to the notification. [512 chars] (Optional)
+    * `app` - Name of the application. [256 chars]
+    * `event` - Name of the event or the subject. [1024 chars]
+    * `description` - Description [10000 chars]
 * `callback` - callback(error,response)
 
 ### retrieve.token(callback)
